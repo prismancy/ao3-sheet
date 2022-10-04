@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { magenta } from 'chalk';
+import chalk from 'https://esm.sh/chalk@5.0.1';
+const { magenta } = chalk;
 
 const AO3Query = 'https://archiveofourown.org/works/';
 const ao3Regex = /https:\/\/archiveofourown\.org\/works\/(\d+)/;
@@ -18,11 +18,11 @@ export interface Work {
 }
 export async function getWork(id: string): Promise<Work> {
   const url = `${AO3Query}${id}`;
-  const response = await axios.get(url);
-  const html = await response.data;
+  const response = await fetch(url);
+  const html = await response.text();
 
-  const { title } = html.match(titleRegex).groups;
-  const { words } = html.match(wordsRegex).groups;
+  const title = html.match(titleRegex)?.groups?.title || '';
+  const words = html.match(wordsRegex)?.groups?.words || '';
   return {
     id,
     title: title.trim().split(' - ')[0],

@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "add": "deno run --unstable -A src/add.ts"
+  }
+}
