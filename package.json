@@ -1,9 +1,0 @@
-{
-  "name": "fan-fiction",
-  "scripts": {
-    "add": "node -r @swc-node/register add.ts"
-  },
-  "dependencies": {
-    "@googleapis/sheets": "3.0.2"
-  }
-}

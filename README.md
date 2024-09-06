@@ -1,6 +1,6 @@
 # ao3-sheet
 
-[![license](https://img.shields.io/github/license/in5dev/ao3-sheet.svg)](LICENSE)
+[![license](https://img.shields.io/github/license/iz7n/ao3-sheet.svg)](LICENSE)
 
 Keeps track of works you've read on Archive of Our Own in a Google Sheet
 
@@ -17,4 +17,4 @@ If you put a url with a specific chapter, it will still grab the whole work word
 
 ## License
 
-[MIT © 2022 in5dev](LICENSE)
+[MIT © 2022 iz7n](LICENSE)
